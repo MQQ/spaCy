@@ -105,3 +105,6 @@ website/package.json
 website/blog/announcement.jade
 website/www/
 website/.gitignore
+
+# PyCharm
+.idea/
