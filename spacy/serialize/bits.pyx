@@ -54,7 +54,9 @@ cdef class BitArray:
             start_byte += 1
             start_bit = 0
 
-        for byte in self.data[start_byte:]:
+        ending = self.data[start_byte:]
+        cdef uchar* c_str_ending = ending
+        for byte in c_str_ending:
             for i in range(8):
                 self.i += 1
                 yield 1 if byte & (one << i) else 0

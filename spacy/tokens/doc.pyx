@@ -457,6 +457,7 @@ cdef class Doc:
         t.l_edge = self.length
         t.r_edge = self.length
         assert t.lex.orth != 0
+        cdef bint has_space = has_space
         t.spacy = has_space
         self.length += 1
         self._py_tokens.append(None)
